@@ -24,7 +24,10 @@
     </div>
 
     <!--# header main -->
-    <div class="container" id="header-main">
+    <div
+      class="container d-flex justify-content-between align-items-center"
+      id="header-main"
+    >
       <!-- * logo -->
       <div class="logo">
         <img src="/img/logo.png" alt="Game Hoax logo" />
@@ -32,7 +35,30 @@
       <!--* main menu  -->
       <nav class="main-menu"></nav>
       <!--* user nav -->
-      <div class="user-nav"></div>
+      <div class="user-nav d-flex align-items-center">
+        <div class="search">
+          <font-awesome-icon
+            class="fa-icon"
+            :icon="['fas', 'magnifying-glass']"
+            size="lg"
+          />
+        </div>
+        <div class="user-account">
+          <font-awesome-icon
+            class="fa-icon"
+            :icon="['far', 'user']"
+            size="lg"
+          />
+        </div>
+        <div class="cart d-flex">
+          <font-awesome-icon
+            class="fa-icon"
+            :icon="['fas', 'bag-shopping']"
+            size="xl"
+          />
+          <span class="cart-info">(0) &#163;0.00 </span>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -66,5 +92,23 @@ header {
 
 #header-main {
   padding: 1rem 0;
+  color: #ffffff;
+
+  .user-nav {
+    .fa-icon {
+      cursor: pointer;
+    }
+
+    .user-account,
+    .cart {
+      margin-left: 1.5rem;
+
+      .cart-info {
+        margin-left: 5px;
+        color: $secondary-color-light;
+        font-weight: bold;
+      }
+    }
+  }
 }
 </style>
