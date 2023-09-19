@@ -1,10 +1,16 @@
-<script></script>
+<script>
+export default {
+  props: {
+    mainMenuLinks: Array,
+  },
+};
+</script>
 
 <template>
   <header>
     <!--# header top -->
     <div class="header-top">
-      <div class="container d-flex justify-content-between">
+      <div class="container d-flex justify-content-between align-items-center">
         <!--* left -->
         <div class="header-top__left d-flex">
           <!-- wishlist -->
@@ -32,8 +38,19 @@
       <div class="logo">
         <img src="/img/logo.png" alt="Game Hoax logo" />
       </div>
+
       <!--* main menu  -->
-      <nav class="main-menu"></nav>
+      <nav class="main-menu">
+        <ul class="d-flex">
+          <li
+            v-for="link in this.mainMenuLinks"
+            :class="link.active ? 'active' : ''"
+          >
+            {{ link.title }}
+          </li>
+        </ul>
+      </nav>
+
       <!--* user nav -->
       <div class="user-nav d-flex align-items-center">
         <div class="search">
@@ -94,6 +111,28 @@ header {
   padding: 1rem 0;
   color: #ffffff;
 
+  .logo {
+    cursor: pointer;
+  }
+  .main-menu {
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      padding: 0 1.5rem;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        color: $secondary-color-light;
+      }
+    }
+
+    li.active {
+      color: $secondary-color-light;
+    }
+  }
   .user-nav {
     .fa-icon {
       cursor: pointer;
