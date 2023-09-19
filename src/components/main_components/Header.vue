@@ -22,6 +22,18 @@
         </div>
       </div>
     </div>
+
+    <!--# header main -->
+    <div class="container" id="header-main">
+      <!-- * logo -->
+      <div class="logo">
+        <img src="/img/logo.png" alt="Game Hoax logo" />
+      </div>
+      <!--* main menu  -->
+      <nav class="main-menu"></nav>
+      <!--* user nav -->
+      <div class="user-nav"></div>
+    </div>
   </header>
 </template>
 
@@ -50,5 +62,9 @@ header {
     border-left: 1px solid #444;
     margin-left: 1rem;
   }
+}
+
+#header-main {
+  padding: 1rem 0;
 }
 </style>
