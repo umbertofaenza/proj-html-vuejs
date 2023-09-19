@@ -108,7 +108,7 @@ header {
 }
 
 #header-main {
-  padding: 1rem 0;
+  padding: 2rem 0;
   color: #ffffff;
   font-weight: 400;
 
