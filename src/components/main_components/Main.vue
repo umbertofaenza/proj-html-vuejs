@@ -94,6 +94,7 @@ main {
 
 .jumbotron-content {
   .label {
+    color: black;
     font-size: 2rem;
     font-weight: 400;
     background-color: $secondary-color;
