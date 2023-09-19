@@ -4,4 +4,4 @@
   <h1>Test</h1>
 </template>
 
-<style></style>
+<style lang="scss"></style>
