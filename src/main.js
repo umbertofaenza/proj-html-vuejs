@@ -8,10 +8,10 @@ import * as bootstrap from "bootstrap";
 //* fontawesome
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-// import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 //* fontawesome library
-// library.add(faUserSecret);
+library.add(faChevronDown);
 
 const app = createApp(App);
 app.component("font-awesome-icon", FontAwesomeIcon);
