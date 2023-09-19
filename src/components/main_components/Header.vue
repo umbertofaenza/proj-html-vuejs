@@ -2,9 +2,9 @@
 
 <template>
   <header>
-    <div class="container">
-      <!--# header top -->
-      <div class="header-top d-flex justify-content-between">
+    <!--# header top -->
+    <div class="header-top">
+      <div class="container d-flex justify-content-between">
         <!--* left -->
         <div class="header-top__left d-flex">
           <!-- wishlist -->
@@ -30,10 +30,10 @@
 
 header {
   background-color: $primary-color;
-  border-bottom: 1px solid $primary-color-light;
 }
 .header-top {
   color: #aaaaaa;
+  border-bottom: 1px solid $primary-color-light;
 
   .wishlist,
   .user-help,
