@@ -110,6 +110,7 @@ header {
 #header-main {
   padding: 1rem 0;
   color: #ffffff;
+  font-weight: 400;
 
   .logo {
     cursor: pointer;
@@ -122,7 +123,6 @@ header {
     li {
       padding: 0 1.5rem;
       cursor: pointer;
-      font-weight: bold;
 
       &:hover {
         color: $secondary-color-light;
@@ -145,7 +145,6 @@ header {
       .cart-info {
         margin-left: 5px;
         color: $secondary-color-light;
-        font-weight: bold;
       }
     }
   }
