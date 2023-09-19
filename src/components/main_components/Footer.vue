@@ -1,9 +1,7 @@
 <script></script>
 
 <template>
-  <footer>
-    <h1>Footer</h1>
-  </footer>
+  <footer></footer>
 </template>
 
 <style lang="scss" scoped></style>

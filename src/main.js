@@ -13,12 +13,25 @@ import {
   faChevronDown,
   faMagnifyingGlass,
   faBagShopping,
+  faTruck,
+  faSackDollar,
+  faTag,
+  faHandHoldingDollar,
 } from "@fortawesome/free-solid-svg-icons";
 // regular
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 
 //* fontawesome library
-library.add(faChevronDown, faMagnifyingGlass, faUser, faBagShopping);
+library.add(
+  faChevronDown,
+  faMagnifyingGlass,
+  faUser,
+  faBagShopping,
+  faTruck,
+  faSackDollar,
+  faTag,
+  faHandHoldingDollar
+);
 
 const app = createApp(App);
 app.component("font-awesome-icon", FontAwesomeIcon);
