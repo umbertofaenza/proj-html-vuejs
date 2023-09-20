@@ -1,4 +1,10 @@
-<script></script>
+<script>
+import ShowcaseCard from "../other_components/ShowcaseCard.vue";
+
+export default {
+  components: { ShowcaseCard },
+};
+</script>
 
 <template>
   <main>
@@ -74,6 +80,12 @@
           </div>
         </div>
       </div>
+
+      <!--* showcase top section -->
+      <section class="row row-cols-2" id="showcase-top">
+        <ShowcaseCard />
+        <ShowcaseCard />
+      </section>
     </div>
   </main>
 </template>
@@ -102,6 +114,7 @@ main {
     padding: 0 2rem;
     border-radius: 50px 0;
   }
+
   .jumbotron-title {
     font-size: 5rem;
     color: white;
@@ -124,28 +137,32 @@ main {
 
 .showcase-divider {
   padding: 3rem 0;
-}
 
-.box {
-  padding: 0 2.5rem;
-  border-right: 1px solid #333;
+  .box {
+    padding: 0 2.5rem;
+    border-right: 1px solid #333;
 
-  &:last-child {
-    border: none;
-  }
+    &:last-child {
+      border: none;
+    }
 
-  .box__icon {
-    margin-right: 1rem;
-  }
+    .box__icon {
+      margin-right: 1rem;
+    }
 
-  span {
-    display: block;
-    font-weight: 400;
+    span {
+      display: block;
+      font-weight: 400;
 
-    &:nth-of-type(2) {
-      color: #aaaaaa;
-      font-weight: 300;
+      &:nth-of-type(2) {
+        color: #aaaaaa;
+        font-weight: 300;
+      }
     }
   }
+}
+
+#showcase-top {
+  padding: 2rem 0;
 }
 </style>
