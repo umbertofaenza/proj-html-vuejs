@@ -20,6 +20,9 @@ import {
   faChevronLeft,
   faChevronRight,
   faStar,
+  faLocationDot,
+  faPhone,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 // regular
 import {
@@ -42,7 +45,10 @@ library.add(
   faChevronRight,
   faStar,
   faCalendarDays,
-  faComments
+  faComments,
+  faLocationDot,
+  faPhone,
+  faEnvelope
 );
 
 const app = createApp(App);
