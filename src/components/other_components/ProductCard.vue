@@ -61,6 +61,7 @@ img {
 
 .product-card {
   background-color: black;
+  cursor: pointer;
 }
 
 .product-media {

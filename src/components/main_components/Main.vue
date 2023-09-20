@@ -3,9 +3,10 @@
 import ShowcaseCard from "../other_components/ShowcaseCard.vue";
 import SpecialCategory from "../section_components/SpecialCategory.vue";
 import OurProducts from "../section_components/OurProducts.vue";
+import DOTD from "../section_components/DOTD.vue";
 
 export default {
-  components: { ShowcaseCard, SpecialCategory, OurProducts },
+  components: { ShowcaseCard, SpecialCategory, OurProducts, DOTD },
 
   props: {
     topShowcaseCardsData: Array,
@@ -107,6 +108,9 @@ export default {
           :cardData="card"
         />
       </div>
+
+      <!--* deal of the day section  -->
+      <DOTD />
     </div>
   </main>
 </template>
@@ -121,7 +125,7 @@ main {
 #jumbotron {
   height: 800px;
   background-image: url(/img/jumbotron.jpg);
-  background-size: 99%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
