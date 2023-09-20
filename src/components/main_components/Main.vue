@@ -2,9 +2,10 @@
 // import components
 import ShowcaseCard from "../other_components/ShowcaseCard.vue";
 import SpecialCategory from "../section_components/SpecialCategory.vue";
+import OurProducts from "../section_components/OurProducts.vue";
 
 export default {
-  components: { ShowcaseCard, SpecialCategory },
+  components: { ShowcaseCard, SpecialCategory, OurProducts },
 
   props: {
     topShowcaseCardsData: Array,
@@ -94,6 +95,9 @@ export default {
 
       <!--* special category section  -->
       <SpecialCategory />
+
+      <!--* our products section  -->
+      <OurProducts />
     </div>
   </main>
 </template>
