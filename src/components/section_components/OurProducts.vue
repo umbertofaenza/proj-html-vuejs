@@ -1,4 +1,20 @@
-<script></script>
+<script>
+// import components
+import ProductCard from "../other_components/ProductCard.vue";
+
+// import data
+import { store } from "../../data/store";
+
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+
+  components: { ProductCard },
+};
+</script>
 
 <template>
   <section id="our-products">
@@ -6,12 +22,26 @@
     <div class="section-title">Our Products</div>
     <!-- buttons -->
     <div class="products-buttons d-flex justify-content-center">
-      <div class="product-btn active">Featured</div>
-      <div class="product-btn">New Arrival</div>
-      <div class="product-btn">Best Sellers</div>
+      <div class="products-btn active">Featured</div>
+      <div class="products-btn">New Arrival</div>
+      <div class="products-btn">Best Sellers</div>
     </div>
-    <!-- cards -->
-    <div class="row row-cols-4"></div>
+    <!-- cards list-->
+    <div class="row row-cols-4" id="cards-list">
+      <!-- arrow left -->
+      <div class="arrow left">
+        <font-awesome-icon :icon="['fas', 'chevron-left']" />
+      </div>
+      <!-- cards -->
+      <ProductCard
+        v-for="product in this.store.ourProductsData"
+        :product="product"
+      />
+      <!-- arrow right -->
+      <div class="arrow right">
+        <font-awesome-icon :icon="['fas', 'chevron-right']" />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -37,7 +67,11 @@
   }
 }
 
-.product-btn {
+.products-buttons {
+  margin-bottom: 3rem;
+}
+
+.products-btn {
   padding: 1rem;
   width: 200px;
   border: 1px solid $primary-color-light;
@@ -48,5 +82,36 @@
   &.active {
     color: $secondary-color-light;
   }
+}
+
+#cards-list {
+  position: relative;
+}
+
+.arrow {
+  border: 1px solid currentColor;
+  width: max-content;
+  height: max-content;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow.left {
+  position: absolute;
+  top: 30%;
+  left: -0.5rem;
+  z-index: 1;
+}
+
+.arrow.right {
+  position: absolute;
+  top: 30%;
+  right: -0.5rem;
+  z-index: 1;
 }
 </style>

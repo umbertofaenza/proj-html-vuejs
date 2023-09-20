@@ -17,6 +17,9 @@ import {
   faSackDollar,
   faTag,
   faHandHoldingDollar,
+  faChevronLeft,
+  faChevronRight,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 // regular
 import { faUser } from "@fortawesome/free-regular-svg-icons";
@@ -30,7 +33,10 @@ library.add(
   faTruck,
   faSackDollar,
   faTag,
-  faHandHoldingDollar
+  faHandHoldingDollar,
+  faChevronLeft,
+  faChevronRight,
+  faStar
 );
 
 const app = createApp(App);
