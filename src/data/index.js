@@ -44,4 +44,17 @@ const topShowcaseCardsData = [
   },
 ];
 
-export { mainMenuLinks, topShowcaseCardsData };
+const bottomShowcaseCardsData = [
+  {
+    label: "20% Discount",
+    title: "Dragon's Dogma Video Game",
+    img: "/img/cms-banner-03.jpg",
+  },
+  {
+    label: "30% Discount",
+    title: "World of Tanks New Game",
+    img: "/img/cms-banner-04.jpg",
+  },
+];
+
+export { mainMenuLinks, topShowcaseCardsData, bottomShowcaseCardsData };

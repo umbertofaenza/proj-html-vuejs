@@ -57,7 +57,7 @@ export default {
 }
 
 .card-text {
-  max-width: 50%;
-  margin-right: 2rem;
+  width: 250px;
+  margin-right: 5rem;
 }
 </style>

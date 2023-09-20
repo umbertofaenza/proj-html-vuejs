@@ -9,6 +9,7 @@ export default {
 
   props: {
     topShowcaseCardsData: Array,
+    bottomShowcaseCardsData: Array,
   },
 };
 </script>
@@ -98,6 +99,14 @@ export default {
 
       <!--* our products section  -->
       <OurProducts />
+
+      <!--* showcase bottom -->
+      <div class="row row-cols-2" id="showcase-bottom">
+        <ShowcaseCard
+          v-for="card in bottomShowcaseCardsData"
+          :cardData="card"
+        />
+      </div>
     </div>
   </main>
 </template>
@@ -176,5 +185,9 @@ main {
 
 #showcase-top {
   padding: 2rem 0;
+}
+
+#showcase-bottom {
+  padding: 4rem 0;
 }
 </style>
