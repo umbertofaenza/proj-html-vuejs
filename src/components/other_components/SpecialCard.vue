@@ -1,7 +1,7 @@
 <script>
 export default {
   props: {
-    cardData: Array,
+    cardData: Object,
   },
 };
 </script>

@@ -5,10 +5,6 @@ export default {
   props: {
     cardData: Object,
   },
-
-  created() {
-    console.log(this.image);
-  },
 };
 </script>
 
