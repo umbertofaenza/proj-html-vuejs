@@ -22,7 +22,11 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 // regular
-import { faUser } from "@fortawesome/free-regular-svg-icons";
+import {
+  faUser,
+  faCalendarDays,
+  faComments,
+} from "@fortawesome/free-regular-svg-icons";
 
 //* fontawesome library
 library.add(
@@ -36,7 +40,9 @@ library.add(
   faHandHoldingDollar,
   faChevronLeft,
   faChevronRight,
-  faStar
+  faStar,
+  faCalendarDays,
+  faComments
 );
 
 const app = createApp(App);

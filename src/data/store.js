@@ -76,4 +76,25 @@ export const store = reactive({
       img: "/img/10.jpg",
     },
   ],
+
+  blogsData: [
+    {
+      title: "Anyway REPS is NYC agency repres enting photographers",
+      date: "Jan 18, 2021",
+      comments: "0",
+      img: "/img/Nisi-ut-aliquid-ex-ea-com.jpg",
+    },
+    {
+      title: "Nasual risus suscipit Lorem Ipsum is simply text",
+      date: "May 30, 2021",
+      comments: "0",
+      img: "/img/Illo-inventore-veritatis-quasi.jpg",
+    },
+    {
+      title: "Nostrum Iesum Christum Lorem Ipsum is simply text",
+      date: "Apr 13, 2021",
+      comments: "0",
+      img: "/img/At-vero-eos-et-accusamus.jpg",
+    },
+  ],
 });
