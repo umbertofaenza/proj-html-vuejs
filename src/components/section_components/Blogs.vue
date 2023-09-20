@@ -32,6 +32,7 @@ export default {
 
 #blogs {
   border-bottom: 1px solid #444;
+  padding-bottom: 4rem;
 }
 .section-title {
   font-size: 3rem;

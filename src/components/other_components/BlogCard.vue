@@ -49,8 +49,8 @@ img {
 }
 
 .blog-card {
-  height: 400px;
   cursor: pointer;
+  padding: 1rem 0;
 }
 
 .blog-title {
