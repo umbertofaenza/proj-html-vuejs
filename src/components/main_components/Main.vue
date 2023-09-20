@@ -1,6 +1,7 @@
 <script>
 // import components
 import ShowcaseCard from "../other_components/ShowcaseCard.vue";
+import SpecialCategory from "../section_components/SpecialCategory.vue";
 
 export default {
   components: { ShowcaseCard, SpecialCategory },
@@ -90,6 +91,9 @@ export default {
       <div class="row row-cols-2" id="showcase-top">
         <ShowcaseCard v-for="card in topShowcaseCardsData" :cardData="card" />
       </div>
+
+      <!--* special category section  -->
+      <SpecialCategory />
     </div>
   </main>
 </template>
