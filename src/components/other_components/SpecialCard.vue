@@ -9,7 +9,12 @@ export default {
 <template>
   <div class="col">
     <!-- card -->
-    <div class="special-card d-flex align-items-end">
+    <div
+      class="special-card d-flex align-items-end"
+      :style="{
+        backgroundImage: `url(${cardData.img})`,
+      }"
+    >
       <!-- card text -->
       <div class="card-text">
         <!-- title -->
@@ -35,7 +40,6 @@ a {
 
 .special-card {
   height: 550px;
-  background-color: black;
 }
 
 .card-text {

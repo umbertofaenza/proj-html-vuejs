@@ -11,7 +11,12 @@ export default {
 <template>
   <div class="col">
     <!--* showcase card -->
-    <div class="showcase-card d-flex justify-content-end align-items-center">
+    <div
+      class="showcase-card d-flex justify-content-end align-items-center"
+      :style="{
+        backgroundImage: `url(${cardData.img})`,
+      }"
+    >
       <div class="card-text">
         <!-- label -->
         <div class="label">
@@ -31,7 +36,6 @@ export default {
 
 .showcase-card {
   height: 350px;
-  background-color: black;
 }
 
 .label {
