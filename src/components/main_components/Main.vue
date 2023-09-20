@@ -144,6 +144,17 @@ export default {
     <div class="container">
       <!--* blogs section  -->
       <Blogs />
+
+      <!--* sponsors divider -->
+      <div
+        class="sponsors-divider d-flex justify-content-around align-items-center"
+      >
+        <img src="/img/brand-01.png" />
+        <img src="/img/brand-02.png" />
+        <img src="/img/brand-03.png" />
+        <img src="/img/brand-04.png" />
+        <img src="/img/brand-05.png" />
+      </div>
     </div>
   </main>
 </template>
@@ -261,5 +272,9 @@ main {
   .container {
     height: 100%;
   }
+}
+
+.sponsors-divider {
+  padding: 4rem;
 }
 </style>
