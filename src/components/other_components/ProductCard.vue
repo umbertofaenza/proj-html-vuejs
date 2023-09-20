@@ -26,12 +26,14 @@ export default {
             v-for="i in Math.ceil(product.rating)"
             :icon="['fas', 'star']"
             style="color: #f9aa01"
+            size="xs"
           />
           <!-- empty stars -->
           <font-awesome-icon
             v-for="i in 5 - Math.ceil(product.rating)"
             :icon="['fas', 'star']"
             style="color: #b9b8b6"
+            size="xs"
           />
         </div>
         <!-- name -->
