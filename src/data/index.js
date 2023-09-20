@@ -31,4 +31,17 @@ const mainMenuLinks = [
   },
 ];
 
-export { mainMenuLinks };
+const topShowcaseCardsData = [
+  {
+    label: "Most Popular",
+    title: "The Battlefield 4 Naval Strike",
+    img: "/img/cms-banner-01.jpg",
+  },
+  {
+    label: "Latest Game",
+    title: "Assassin's Creed Unity Game",
+    img: "/img/cms-banner-02.jpg",
+  },
+];
+
+export { mainMenuLinks, topShowcaseCardsData };

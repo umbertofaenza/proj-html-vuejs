@@ -6,11 +6,13 @@ import Footer from "./components/main_components/Footer.vue";
 
 // import data
 import { mainMenuLinks } from "./data";
+import { topShowcaseCardsData } from "./data";
 
 export default {
   data() {
     return {
       mainMenuLinks,
+      topShowcaseCardsData,
     };
   },
 
@@ -20,7 +22,7 @@ export default {
 
 <template>
   <Header :mainMenuLinks="mainMenuLinks" />
-  <Main />
+  <Main :topShowcaseCardsData="topShowcaseCardsData" />
   <Footer />
 </template>
 

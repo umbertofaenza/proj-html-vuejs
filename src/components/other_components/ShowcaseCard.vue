@@ -1,4 +1,16 @@
-<script></script>
+<script>
+import { createHydrationRenderer } from "vue";
+
+export default {
+  props: {
+    cardData: Object,
+  },
+
+  created() {
+    console.log(this.image);
+  },
+};
+</script>
 
 <template>
   <div class="col">
@@ -6,9 +18,13 @@
     <div class="showcase-card d-flex justify-content-end align-items-center">
       <div class="card-text">
         <!-- label -->
-        <div class="label">Upcoming Stock</div>
+        <div class="label">
+          {{ cardData.label }}
+        </div>
         <!-- title -->
-        <div class="card-title">The Battlefield 4 Naval Strike</div>
+        <div class="card-title">
+          {{ cardData.title }}
+        </div>
       </div>
     </div>
   </div>

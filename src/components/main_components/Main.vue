@@ -1,8 +1,13 @@
 <script>
+// import components
 import ShowcaseCard from "../other_components/ShowcaseCard.vue";
 
 export default {
-  components: { ShowcaseCard },
+  components: { ShowcaseCard, SpecialCategory },
+
+  props: {
+    topShowcaseCardsData: Array,
+  },
 };
 </script>
 
@@ -81,11 +86,10 @@ export default {
         </div>
       </div>
 
-      <!--* showcase top section -->
-      <section class="row row-cols-2" id="showcase-top">
-        <ShowcaseCard />
-        <ShowcaseCard />
-      </section>
+      <!--* showcase top -->
+      <div class="row row-cols-2" id="showcase-top">
+        <ShowcaseCard v-for="card in topShowcaseCardsData" :cardData="card" />
+      </div>
     </div>
   </main>
 </template>

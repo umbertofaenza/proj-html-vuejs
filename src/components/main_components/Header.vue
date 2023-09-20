@@ -1,4 +1,6 @@
 <script>
+import { mainMenuLinks } from "../../data";
+
 export default {
   props: {
     mainMenuLinks: Array,
