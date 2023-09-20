@@ -4,9 +4,10 @@ import ShowcaseCard from "../other_components/ShowcaseCard.vue";
 import SpecialCategory from "../section_components/SpecialCategory.vue";
 import OurProducts from "../section_components/OurProducts.vue";
 import DOTD from "../section_components/DOTD.vue";
+import Blogs from "../section_components/Blogs.vue";
 
 export default {
-  components: { ShowcaseCard, SpecialCategory, OurProducts, DOTD },
+  components: { ShowcaseCard, SpecialCategory, OurProducts, DOTD, Blogs },
 
   props: {
     topShowcaseCardsData: Array,
@@ -138,6 +139,11 @@ export default {
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="container">
+      <!--* blogs section  -->
+      <Blogs />
     </div>
   </main>
 </template>
