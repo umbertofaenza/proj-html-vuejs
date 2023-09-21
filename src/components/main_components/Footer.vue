@@ -85,7 +85,7 @@ export default {
                 <button type="submit">Submit</button>
               </li>
               <!-- socials -->
-              <li>
+              <li id="socials">
                 <font-awesome-icon
                   class="fa-icon"
                   :icon="['fab', 'facebook-f']"
@@ -180,9 +180,13 @@ button:active {
   border: 2px solid $secondary-color-light;
 }
 
-.fa-icon {
+#socials .fa-icon {
   color: white;
   padding: 1rem 2rem 0 0;
+}
+
+#socials .fa-icon:hover {
+  color: $secondary-color-light;
 }
 
 .footer-bottom {
