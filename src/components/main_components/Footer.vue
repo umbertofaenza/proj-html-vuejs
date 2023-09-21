@@ -106,6 +106,20 @@ export default {
         </div>
       </div>
     </div>
+
+    <!--# footer-bottom -->
+    <div class="footer-bottom">
+      <div class="container d-flex justify-content-between">
+        <div class="copyright">Copyright @ 2023 Codezeel</div>
+        <div class="payment-methods">
+          <img src="/img/amex.png" />
+          <img src="/img/discover.png" />
+          <img src="/img/mastercard.png" />
+          <img src="/img/paypal.png" />
+          <img src="/img/visa.png" />
+        </div>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -169,5 +183,15 @@ button:active {
 .fa-icon {
   color: white;
   padding: 1rem 2rem 0 0;
+}
+
+.footer-bottom {
+  color: #aaaaaa;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+}
+
+.payment-methods img {
+  padding: 0 5px;
 }
 </style>
