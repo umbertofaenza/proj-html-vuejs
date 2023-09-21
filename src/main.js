@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 // solid
 import {
   faChevronDown,
+  faChevronUp,
   faMagnifyingGlass,
   faBagShopping,
   faTruck,
@@ -48,6 +49,7 @@ import {
 //* fontawesome library
 library.add(
   faChevronDown,
+  faChevronUp,
   faMagnifyingGlass,
   faUser,
   faBagShopping,

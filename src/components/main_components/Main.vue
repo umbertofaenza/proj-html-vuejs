@@ -8,6 +8,12 @@ import Blogs from "../section_components/Blogs.vue";
 import QuoteSlider from "../other_components/QuoteSlider.vue";
 
 export default {
+  methods: {
+    scrollToTop() {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    },
+  },
+
   components: {
     ShowcaseCard,
     SpecialCategory,
@@ -26,6 +32,11 @@ export default {
 
 <template>
   <main>
+    <!--* scroll up button -->
+    <div @click="scrollToTop()" class="scroll-up">
+      <font-awesome-icon :icon="['fas', 'chevron-up']" />
+    </div>
+
     <!--# jumbotron -->
     <div id="jumbotron">
       <div class="container h-100 d-flex align-items-center">
@@ -153,6 +164,28 @@ export default {
 
 main {
   background-image: url(/img/body-bg.jpg);
+  position: relative;
+}
+
+.scroll-up {
+  background-color: $secondary-color;
+  color: $primary-color;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 #jumbotron {
