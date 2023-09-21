@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       store,
-      activeSlide: 0,
+      activeSlide: 1,
     };
   },
 };
@@ -37,13 +37,11 @@ export default {
         </div>
         <!-- slider controls -->
         <div class="slider-controls d-flex">
-          <div class="dot-control active">
-            <font-awesome-icon :icon="['fas', 'circle']" size="2xs" />
-          </div>
-          <div class="dot-control">
-            <font-awesome-icon :icon="['fas', 'circle']" size="2xs" />
-          </div>
-          <div class="dot-control">
+          <div
+            v-for="(slide, index) in this.store.quoteSliderData"
+            class="dot-control"
+            :class="activeSlide == index ? 'active' : ''"
+          >
             <font-awesome-icon :icon="['fas', 'circle']" size="2xs" />
           </div>
         </div>
