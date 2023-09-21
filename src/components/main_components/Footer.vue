@@ -1,5 +1,11 @@
 <script>
 export default {
+  data() {
+    return {
+      userEmailInput: "",
+    };
+  },
+
   props: {
     footerInformationLinks: Array,
     footerExtrasLinks: Array,
@@ -81,7 +87,11 @@ export default {
               </li>
               <!-- input -->
               <li>
-                <input type="email" placeholder="Enter your email..." />
+                <input
+                  type="email"
+                  placeholder="Enter your email..."
+                  v-model="userEmailInput"
+                />
                 <button type="submit">Submit</button>
               </li>
               <!-- socials -->
