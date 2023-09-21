@@ -201,6 +201,10 @@ main {
     padding: 0.6rem 1.25rem;
     cursor: pointer;
     font-weight: 400;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
   }
 }
 
