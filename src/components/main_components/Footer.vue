@@ -53,14 +53,14 @@ export default {
           <!--* links -->
           <div class="footer-links d-flex">
             <!-- information links -->
-            <ul>
+            <ul id="information-links">
               <div class="title">Information</div>
               <li v-for="link in this.footerInformationLinks">
                 {{ link.text }}
               </li>
             </ul>
             <!-- extras links -->
-            <ul>
+            <ul id="extras-links">
               <div class="title">Extras</div>
               <li v-for="link in this.footerExtrasLinks">
                 {{ link.text }}
@@ -193,5 +193,10 @@ button:active {
 
 .payment-methods img {
   padding: 0 5px;
+}
+
+#information-links li:hover,
+#extras-links li:hover {
+  color: $secondary-color-light;
 }
 </style>
