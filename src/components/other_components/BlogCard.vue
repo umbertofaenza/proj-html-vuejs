@@ -12,6 +12,11 @@ export default {
     <div class="blog-card">
       <!-- media -->
       <div class="card-media">
+        <!-- hover controls -->
+        <div class="blog-controls">
+          <font-awesome-icon class="fa-icon" :icon="['fas', 'plus']" />
+          <font-awesome-icon class="fa-icon" :icon="['fas', 'gears']" />
+        </div>
         <img :src="blog.img" />
       </div>
       <!-- text -->
@@ -51,6 +56,10 @@ img {
 .blog-card {
   cursor: pointer;
   padding: 1rem 0;
+
+  &:hover .blog-controls {
+    display: block;
+  }
 }
 
 .blog-title {
@@ -66,5 +75,26 @@ img {
 
 .fa-icon {
   margin-right: 5px;
+}
+
+.card-media {
+  position: relative;
+}
+
+.blog-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+
+  .fa-icon {
+    aspect-ratio: 1;
+    padding: 10px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 </style>
