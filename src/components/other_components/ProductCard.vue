@@ -15,7 +15,8 @@ export default {
         <div v-if="product.discount" class="label">
           {{ product.discount }}
         </div>
-        <img :src="product.img" />
+        <img class="main-image" :src="product.img" />
+        <img class="hover-image" src="/img/15.jpg" />
       </div>
       <!-- info -->
       <div class="product-info align-self-end">
@@ -40,12 +41,31 @@ export default {
         <div class="product-name">
           {{ product.productName }}
         </div>
+        <!-- price & controls-->
         <!-- price -->
         <div class="product-price">
           <span v-if="product.previousPrice" class="prev-price">{{
             product.previousPrice
           }}</span>
           {{ product.price }}
+        </div>
+        <!-- controls -->
+        <div class="product-controls">
+          <span>
+            <font-awesome-icon
+              class="fa-icon"
+              :icon="['fas', 'bag-shopping']"
+            />
+          </span>
+          <span>
+            <font-awesome-icon class="fa-icon" :icon="['fas', 'heart']" />
+          </span>
+          <span>
+            <font-awesome-icon class="fa-icon" :icon="['fas', 'maximize']" />
+          </span>
+          <span>
+            <font-awesome-icon class="fa-icon" :icon="['fas', 'eye']" />
+          </span>
         </div>
       </div>
     </div>
@@ -62,10 +82,30 @@ img {
 .product-card {
   background-color: black;
   cursor: pointer;
+
+  &:hover .product-price {
+    display: none;
+  }
+
+  &:hover .product-controls {
+    display: flex;
+  }
+
+  &:hover .main-image {
+    display: none;
+  }
+
+  &:hover .hover-image {
+    display: block;
+  }
 }
 
 .product-media {
   position: relative;
+
+  .hover-image {
+    display: none;
+  }
 }
 
 .label {
@@ -89,7 +129,7 @@ img {
   .product-rating,
   .product-name,
   .product-price {
-    padding: 5px;
+    padding: 10px;
   }
 
   .product-name {
@@ -103,6 +143,24 @@ img {
   .prev-price {
     text-decoration: line-through;
     color: white;
+  }
+}
+
+.product-controls {
+  border-top: 1px solid $primary-color-light;
+  margin-top: 10px;
+  justify-content: center;
+
+  display: none;
+
+  span {
+    display: inline-block;
+    padding: 4px 1.5rem;
+    border-right: 1px solid $primary-color-light;
+  }
+
+  span:last-child {
+    border: none;
   }
 }
 </style>
