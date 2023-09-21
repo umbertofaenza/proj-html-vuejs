@@ -34,7 +34,11 @@ export default {
         <font-awesome-icon :icon="['fas', 'chevron-left']" />
       </div>
       <!-- cards -->
-      <ProductCard v-for="product in this.store.dotdData" :product="product" />
+      <ProductCard
+        v-for="(product, index) in this.store.dotdData"
+        :key="index"
+        :product="product"
+      />
       <!-- arrow right -->
       <div class="arrow right">
         <font-awesome-icon :icon="['fas', 'chevron-right']" />

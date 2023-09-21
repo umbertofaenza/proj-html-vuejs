@@ -61,7 +61,10 @@ export default {
             <!-- information links -->
             <ul id="information-links">
               <div class="title">Information</div>
-              <li v-for="link in this.footerInformationLinks">
+              <li
+                v-for="(link, index) in this.footerInformationLinks"
+                :key="index"
+              >
                 {{ link.text }}
               </li>
             </ul>

@@ -101,7 +101,11 @@ export default {
 
       <!--# showcase top -->
       <div class="row row-cols-2" id="showcase-top">
-        <ShowcaseCard v-for="card in topShowcaseCardsData" :cardData="card" />
+        <ShowcaseCard
+          v-for="(card, index) in topShowcaseCardsData"
+          :key="index"
+          :cardData="card"
+        />
       </div>
 
       <!--# special category section  -->
@@ -113,7 +117,8 @@ export default {
       <!--# showcase bottom -->
       <div class="row row-cols-2" id="showcase-bottom">
         <ShowcaseCard
-          v-for="card in bottomShowcaseCardsData"
+          v-for="(card, index) in bottomShowcaseCardsData"
+          :key="index"
           :cardData="card"
         />
       </div>

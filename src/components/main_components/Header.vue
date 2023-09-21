@@ -43,7 +43,8 @@ export default {
         <nav class="main-menu d-flex align-items-center">
           <ul class="d-flex">
             <li
-              v-for="link in this.mainMenuLinks"
+              v-for="(link, index) in this.mainMenuLinks"
+              :key="index"
               :class="link.active ? 'active' : ''"
             >
               {{ link.title }}

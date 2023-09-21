@@ -23,7 +23,8 @@ export default {
     <!-- card -->
     <div class="row row-cols-3">
       <SpecialCard
-        v-for="card in this.store.specialCategoryData"
+        v-for="(card, index) in this.store.specialCategoryData"
+        :key="index"
         :cardData="card"
       />
     </div>

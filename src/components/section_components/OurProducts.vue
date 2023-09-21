@@ -34,7 +34,8 @@ export default {
       </div>
       <!-- cards -->
       <ProductCard
-        v-for="product in this.store.ourProductsData"
+        v-for="(product, index) in this.store.ourProductsData"
+        :key="index"
         :product="product"
       />
       <!-- arrow right -->

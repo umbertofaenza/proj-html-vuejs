@@ -26,7 +26,11 @@ export default {
       <div class="arrow left">
         <font-awesome-icon :icon="['fas', 'chevron-left']" />
       </div>
-      <BlogCard v-for="blog in this.store.blogsData" :blog="blog" />
+      <BlogCard
+        v-for="(blog, index) in this.store.blogsData"
+        :key="index"
+        :blog="blog"
+      />
       <!-- arrow right -->
       <div class="arrow right">
         <font-awesome-icon :icon="['fas', 'chevron-right']" />
