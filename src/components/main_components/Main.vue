@@ -18,7 +18,7 @@ export default {
 
 <template>
   <main>
-    <!--* jumbotron -->
+    <!--# jumbotron -->
     <div id="jumbotron">
       <div class="container h-100 d-flex align-items-center">
         <div class="jumbotron-content">
@@ -33,7 +33,7 @@ export default {
     </div>
 
     <div class="container">
-      <!--* showcase divider -->
+      <!--# showcase divider -->
       <div class="showcase-divider d-flex justify-content-center">
         <!-- box -->
         <div class="box d-flex align-items-center">
@@ -91,18 +91,18 @@ export default {
         </div>
       </div>
 
-      <!--* showcase top -->
+      <!--# showcase top -->
       <div class="row row-cols-2" id="showcase-top">
         <ShowcaseCard v-for="card in topShowcaseCardsData" :cardData="card" />
       </div>
 
-      <!--* special category section  -->
+      <!--# special category section  -->
       <SpecialCategory />
 
-      <!--* our products section  -->
+      <!--# our products section  -->
       <OurProducts />
 
-      <!--* showcase bottom -->
+      <!--# showcase bottom -->
       <div class="row row-cols-2" id="showcase-bottom">
         <ShowcaseCard
           v-for="card in bottomShowcaseCardsData"
@@ -110,11 +110,11 @@ export default {
         />
       </div>
 
-      <!--* deal of the day section  -->
+      <!--# deal of the day section  -->
       <DOTD />
     </div>
 
-    <!--* quote jumbo  -->
+    <!--# quote jumbo  -->
     <div id="quote-jumbo">
       <div class="container d-flex align-items-center">
         <!-- quote wrapper -->
@@ -142,10 +142,10 @@ export default {
     </div>
 
     <div class="container">
-      <!--* blogs section  -->
+      <!--# blogs section  -->
       <Blogs />
 
-      <!--* sponsors divider -->
+      <!--# sponsors divider -->
       <div
         class="sponsors-divider d-flex justify-content-around align-items-center"
       >
