@@ -182,6 +182,7 @@ main {
   top: 50%;
   right: 2rem;
   cursor: pointer;
+  z-index: 2;
 
   &:hover {
     transform: scale(1.1);
