@@ -32,50 +32,57 @@ export default {
     </div>
 
     <!--# header main -->
-    <div
-      class="container d-flex justify-content-between align-items-center"
-      id="header-main"
-    >
-      <!-- * logo -->
-      <div class="logo">
-        <img src="/img/logo.png" alt="Game Hoax logo" />
-      </div>
-
-      <!--* main menu  -->
-      <nav class="main-menu">
-        <ul class="d-flex">
-          <li
-            v-for="link in this.mainMenuLinks"
-            :class="link.active ? 'active' : ''"
-          >
-            {{ link.title }}
-          </li>
-        </ul>
-      </nav>
-
-      <!--* user nav -->
-      <div class="user-nav d-flex align-items-center">
-        <div class="search">
-          <font-awesome-icon
-            class="fa-icon"
-            :icon="['fas', 'magnifying-glass']"
-            size="lg"
-          />
+    <div id="header-main">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- * logo -->
+        <div class="logo">
+          <img src="/img/logo.png" alt="Game Hoax logo" />
         </div>
-        <div class="user-account">
-          <font-awesome-icon
-            class="fa-icon"
-            :icon="['far', 'user']"
-            size="lg"
-          />
-        </div>
-        <div class="cart d-flex">
-          <font-awesome-icon
-            class="fa-icon"
-            :icon="['fas', 'bag-shopping']"
-            size="xl"
-          />
-          <span class="cart-info">(0) &#163;0.00 </span>
+
+        <!--* main menu  -->
+        <nav class="main-menu d-flex align-items-center">
+          <ul class="d-flex">
+            <li
+              v-for="link in this.mainMenuLinks"
+              :class="link.active ? 'active' : ''"
+            >
+              {{ link.title }}
+
+              <ul class="dropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <!--* user nav -->
+        <div class="user-nav d-flex align-items-center">
+          <div class="search">
+            <font-awesome-icon
+              class="fa-icon"
+              :icon="['fas', 'magnifying-glass']"
+              size="lg"
+            />
+          </div>
+          <div class="user-account">
+            <font-awesome-icon
+              class="fa-icon"
+              :icon="['far', 'user']"
+              size="lg"
+            />
+          </div>
+          <div class="cart d-flex">
+            <font-awesome-icon
+              class="fa-icon"
+              :icon="['fas', 'bag-shopping']"
+              size="xl"
+            />
+            <span class="cart-info">(0) &#163;0.00 </span>
+          </div>
         </div>
       </div>
     </div>
@@ -110,29 +117,59 @@ header {
 }
 
 #header-main {
-  padding: 2rem 0;
+  height: 100px;
   color: #ffffff;
   font-weight: 400;
+
+  .container {
+    height: 100%;
+  }
 
   .logo {
     cursor: pointer;
   }
   .main-menu {
+    height: 100px;
+
     ul {
-      margin-bottom: 0;
+      height: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     li {
+      display: flex;
+      align-items: center;
       padding: 0 1.5rem;
       cursor: pointer;
+      position: relative;
 
       &:hover {
         color: $secondary-color-light;
       }
-    }
 
-    li.active {
-      color: $secondary-color-light;
+      &:hover:not(:first-child) .dropdown {
+        display: block;
+      }
+
+      li.active {
+        color: $secondary-color-light;
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    background-color: $primary-color;
+    color: #aaaaaa;
+    border: 1px solid $primary-color-light;
+    border-radius: 5px;
+
+    display: none;
+
+    li {
+      padding: 5px;
     }
   }
   .user-nav {
