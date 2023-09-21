@@ -151,6 +151,7 @@ header {
 
       &:hover:not(:first-child) .dropdown {
         display: block;
+        z-index: 2;
       }
 
       li.active {
