@@ -8,6 +8,8 @@ import Footer from "./components/main_components/Footer.vue";
 import { mainMenuLinks } from "./data";
 import { topShowcaseCardsData } from "./data";
 import { bottomShowcaseCardsData } from "./data";
+import { footerInformationLinks } from "./data";
+import { footerExtrasLinks } from "./data";
 
 export default {
   data() {
@@ -15,6 +17,8 @@ export default {
       mainMenuLinks,
       topShowcaseCardsData,
       bottomShowcaseCardsData,
+      footerInformationLinks,
+      footerExtrasLinks,
     };
   },
 
@@ -28,7 +32,10 @@ export default {
     :topShowcaseCardsData="topShowcaseCardsData"
     :bottomShowcaseCardsData="bottomShowcaseCardsData"
   />
-  <Footer />
+  <Footer
+    :footerInformationLinks="footerInformationLinks"
+    :footerExtrasLinks="footerExtrasLinks"
+  />
 </template>
 
 <style lang="scss">

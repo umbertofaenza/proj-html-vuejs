@@ -57,4 +57,56 @@ const bottomShowcaseCardsData = [
   },
 ];
 
-export { mainMenuLinks, topShowcaseCardsData, bottomShowcaseCardsData };
+const footerInformationLinks = [
+  {
+    text: "Bookmark",
+    href: "#",
+  },
+  {
+    text: "Features",
+    href: "#",
+  },
+  {
+    text: "Sitemap",
+    href: "#",
+  },
+  {
+    text: "Lists",
+    href: "#",
+  },
+  {
+    text: "Contact Us",
+    href: "#",
+  },
+];
+
+const footerExtrasLinks = [
+  {
+    text: "Delivery",
+    href: "#",
+  },
+  {
+    text: "Cart",
+    href: "#",
+  },
+  {
+    text: "Terms & Conditions",
+    href: "#",
+  },
+  {
+    text: "My Account",
+    href: "#",
+  },
+  {
+    text: "About Us",
+    href: "#",
+  },
+];
+
+export {
+  mainMenuLinks,
+  topShowcaseCardsData,
+  bottomShowcaseCardsData,
+  footerInformationLinks,
+  footerExtrasLinks,
+};
