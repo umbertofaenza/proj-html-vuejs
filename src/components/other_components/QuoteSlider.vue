@@ -42,7 +42,13 @@ export default {
       >
         <!-- pic -->
         <div class="profile-pic">
-          <img :src="this.store.quoteSliderData[activeSlide].profilePic" />
+          <div class="quote-icon">
+            <img src="/img/quote.png" />
+          </div>
+          <img
+            class="main-img"
+            :src="this.store.quoteSliderData[activeSlide].profilePic"
+          />
         </div>
         <!-- name -->
         <div class="profile-name">
@@ -85,9 +91,26 @@ export default {
   font-size: 1.2rem;
 
   .profile-pic {
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid $secondary-color-light;
+    position: relative;
+
+    .main-img {
+      border-radius: 50%;
+      border: 2px solid $secondary-color-light;
+    }
+    .quote-icon {
+      background-color: $secondary-color;
+      width: 30px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 
   .profile-name {
