@@ -82,6 +82,10 @@ export default {
   &.active {
     color: $secondary-color-light;
   }
+
+  &:hover {
+    color: $secondary-color-light;
+  }
 }
 
 #cards-list {
