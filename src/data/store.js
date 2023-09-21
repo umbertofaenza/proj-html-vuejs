@@ -97,4 +97,28 @@ export const store = reactive({
       img: "/img/At-vero-eos-et-accusamus.jpg",
     },
   ],
+
+  quoteSliderData: [
+    {
+      profileName: "Luies Charls",
+      profileRole: "Web Designer",
+      profilePic: "/img/t5-1-100x100_left.jpg",
+      quote:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, voluptas. Magnam quod ad maiores maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente, ipsa neque voluptatum at omnis. Lorem ipsum dolor sit amet.",
+    },
+    {
+      profileName: "Khvicha Kvaratskhelia",
+      profileRole: "Creative Director",
+      profilePic: "/img/t4-1-100x100_left.jpg",
+      quote:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, voluptas. Magnam quod ad maiores maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente, ipsa neque voluptatum at omnis. Lorem ipsum dolor sit amet.",
+    },
+    {
+      profileName: "Giovanni Di Lorenzo",
+      profileRole: "Project Manager",
+      profilePic: "/img/t2-1-100x100_left.jpg",
+      quote:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, voluptas. Magnam quod ad maiores maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente, ipsa neque voluptatum at omnis. Lorem ipsum dolor sit amet.",
+    },
+  ],
 });

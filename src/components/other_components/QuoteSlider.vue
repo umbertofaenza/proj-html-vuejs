@@ -1,4 +1,15 @@
-<script></script>
+<script>
+import { store } from "../../data/store";
+
+export default {
+  data() {
+    return {
+      store,
+      activeSlide: 0,
+    };
+  },
+};
+</script>
 
 <template>
   <div id="quote-jumbo">
@@ -9,19 +20,20 @@
       >
         <!-- pic -->
         <div class="profile-pic">
-          <img src="/img/t5-1-100x100_left.jpg" />
+          <img :src="this.store.quoteSliderData[activeSlide].profilePic" />
         </div>
         <!-- name -->
         <div class="profile-name">
-          <span>Luies Charls</span>
-          <span class="role">(Web Designer)</span>
+          <span>
+            {{ this.store.quoteSliderData[activeSlide].profileName }}
+          </span>
+          <span class="role">
+            ({{ this.store.quoteSliderData[activeSlide].profileRole }})
+          </span>
         </div>
         <!-- quote -->
         <div class="quote">
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis,
-          voluptas. Magnam quod ad maiores maxime. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ea sapiente, ipsa neque voluptatum at
-          omnis. Lorem ipsum dolor sit amet."
+          {{ this.store.quoteSliderData[activeSlide].quote }}
         </div>
       </div>
     </div>
