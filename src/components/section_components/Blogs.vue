@@ -21,8 +21,16 @@ export default {
     <!-- title -->
     <div class="section-title">New Game Blogs</div>
     <!-- cards -->
-    <div class="row row-cols-3">
+    <div class="row row-cols-3" id="blogs-list">
+      <!-- arrow left -->
+      <div class="arrow left">
+        <font-awesome-icon :icon="['fas', 'chevron-left']" />
+      </div>
       <BlogCard v-for="blog in this.store.blogsData" :blog="blog" />
+      <!-- arrow right -->
+      <div class="arrow right">
+        <font-awesome-icon :icon="['fas', 'chevron-right']" />
+      </div>
     </div>
   </section>
 </template>
@@ -33,6 +41,10 @@ export default {
 #blogs {
   border-bottom: 1px solid #444;
   padding-bottom: 4rem;
+}
+
+#blogs-list {
+  position: relative;
 }
 .section-title {
   font-size: 3rem;
@@ -47,5 +59,32 @@ export default {
     margin: 0.5rem auto;
     margin-bottom: 1.5rem;
   }
+}
+
+.arrow {
+  border: 1px solid currentColor;
+  width: max-content;
+  height: max-content;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow.left {
+  position: absolute;
+  top: 30%;
+  left: -0.5rem;
+  z-index: 1;
+}
+
+.arrow.right {
+  position: absolute;
+  top: 30%;
+  right: -0.5rem;
+  z-index: 1;
 }
 </style>
