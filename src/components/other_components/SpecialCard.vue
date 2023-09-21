@@ -10,7 +10,7 @@ export default {
   <div class="col">
     <!-- card -->
     <div
-      class="special-card d-flex align-items-end"
+      class="special-card d-flex flex-column justify-content-end"
       :style="{
         backgroundImage: `url(${cardData.img})`,
       }"
@@ -41,6 +41,11 @@ a {
 .special-card {
   height: 550px;
   cursor: pointer;
+  position: relative;
+
+  &:hover .card-text {
+    background-color: rgba($color: #181221, $alpha: 1);
+  }
 }
 
 .card-text {
