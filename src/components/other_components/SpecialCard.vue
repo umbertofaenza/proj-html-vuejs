@@ -40,6 +40,7 @@ a {
 
 .special-card {
   height: 550px;
+  cursor: pointer;
 }
 
 .card-text {

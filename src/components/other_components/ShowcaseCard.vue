@@ -36,6 +36,7 @@ export default {
 
 .showcase-card {
   height: 350px;
+  cursor: pointer;
 }
 
 .label {
