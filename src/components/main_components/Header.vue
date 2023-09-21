@@ -156,22 +156,23 @@ header {
         color: $secondary-color-light;
       }
     }
-  }
 
-  .dropdown {
-    position: absolute;
-    top: 100%;
-    background-color: $primary-color;
-    color: #aaaaaa;
-    border: 1px solid $primary-color-light;
-    border-radius: 5px;
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      background-color: $primary-color;
+      color: #aaaaaa;
+      border: 1px solid $primary-color-light;
+      border-radius: 5px;
 
-    display: none;
+      display: none;
 
-    li {
-      padding: 5px;
+      li {
+        padding: 5px;
+      }
     }
   }
+
   .user-nav {
     .fa-icon {
       cursor: pointer;
