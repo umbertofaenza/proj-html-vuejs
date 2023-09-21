@@ -11,33 +11,44 @@ export default {
   <footer>
     <div class="container">
       <!--# footer-main -->
-      <div class="footer-main d-flex align-items-center">
+      <div class="footer-main">
         <div class="footer-main-wrapper d-flex">
           <!--* business info -->
           <div class="business-info">
-            <!-- list title -->
-            <div class="title">Address Info</div>
-            <!-- address -->
-            <div class="address">
-              <font-awesome-icon
-                :icon="['fas', 'location-dot']"
-                color="#dca458"
-              />
-              <span>
-                60 29th Street San Francisco, CA 94110 507-Union Trade Center,
-                United States of America
-              </span>
-            </div>
-            <!-- tel number -->
-            <div class="tel-number">
-              <font-awesome-icon :icon="['fas', 'phone']" color="#dca458" />
-              <span> (+00) 123-456-789 </span>
-            </div>
-            <!-- email -->
-            <div class="email">
-              <font-awesome-icon :icon="['fas', 'envelope']" color="#dca458" />
-              <span> demo@example.com </span>
-            </div>
+            <ul>
+              <!-- list title -->
+              <div class="title">Address Info</div>
+              <!-- address -->
+              <li>
+                <div class="address">
+                  <font-awesome-icon
+                    :icon="['fas', 'location-dot']"
+                    color="#dca458"
+                  />
+                  <span>
+                    60 29th Street San Francisco, CA 94110 507-Union Trade
+                    Center, United States of America
+                  </span>
+                </div>
+              </li>
+              <!-- tel number -->
+              <li>
+                <div class="tel-number">
+                  <font-awesome-icon :icon="['fas', 'phone']" color="#dca458" />
+                  <span> (+00) 123-456-789 </span>
+                </div>
+              </li>
+              <!-- email -->
+              <li>
+                <div class="email">
+                  <font-awesome-icon
+                    :icon="['fas', 'envelope']"
+                    color="#dca458"
+                  />
+                  <span> demo@example.com </span>
+                </div>
+              </li>
+            </ul>
           </div>
           <!--* links -->
           <div class="footer-links d-flex">
@@ -57,7 +68,41 @@ export default {
             </ul>
           </div>
           <!--* newsletter -->
-          <div class="newsletter"></div>
+          <div class="newsletter">
+            <ul>
+              <!-- title -->
+              <div class="title">Our Newsletter</div>
+              <!-- paragraph -->
+              <li>
+                <p>
+                  There are many variations of passages of form humour or
+                  randomised
+                </p>
+              </li>
+              <!-- input -->
+              <li>
+                <input type="email" placeholder="Enter your email..." />
+                <button type="submit">Submit</button>
+              </li>
+              <!-- socials -->
+              <li>
+                <font-awesome-icon
+                  class="fa-icon"
+                  :icon="['fab', 'facebook-f']"
+                />
+                <font-awesome-icon class="fa-icon" :icon="['fab', 'twitter']" />
+                <font-awesome-icon
+                  class="fa-icon"
+                  :icon="['fab', 'google-plus-g']"
+                />
+                <font-awesome-icon class="fa-icon" :icon="['fab', 'skype']" />
+                <font-awesome-icon
+                  class="fa-icon"
+                  :icon="['fab', 'instagram']"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -65,35 +110,31 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "../../style/_partials/variables.scss";
+
 footer {
   background-image: url("img/footer-bg.png");
   background-size: cover;
 }
 
 .footer-main-wrapper {
+  width: 100%;
   padding: 7rem 0;
 }
 
-.container,
-.business-info,
-.footer-main {
-  height: 100%;
-}
-
-.business-info,
-.newsletter {
-  width: 25%;
+.business-info {
+  width: 30%;
 }
 
 .footer-links {
-  width: 50%;
+  width: 60%;
   justify-content: space-around;
 }
 
 .address,
 .tel-number,
 .email {
-  padding: 10px 0;
+  padding: 5px 0;
   color: #aaaaaa;
   font-size: 1.1rem;
 }
@@ -103,10 +144,30 @@ footer {
   font-weight: 400;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   padding: 5px 0;
   color: #aaaaaa;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+button {
+  background-color: $secondary-color-light;
+  border: 2px solid $secondary-color-light;
+}
+
+button:active {
+  background-color: $secondary-color;
+  border: 2px solid $secondary-color-light;
+}
+
+.fa-icon {
+  color: white;
+  padding: 1rem 2rem 0 0;
 }
 </style>

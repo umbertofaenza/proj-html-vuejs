@@ -30,6 +30,13 @@ import {
   faCalendarDays,
   faComments,
 } from "@fortawesome/free-regular-svg-icons";
+import {
+  faFacebookF,
+  faTwitter,
+  faGooglePlusG,
+  faSkype,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 //* fontawesome library
 library.add(
@@ -48,7 +55,12 @@ library.add(
   faComments,
   faLocationDot,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faFacebookF,
+  faTwitter,
+  faGooglePlusG,
+  faSkype,
+  faInstagram
 );
 
 const app = createApp(App);
