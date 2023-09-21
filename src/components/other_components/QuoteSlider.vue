@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       store,
-      activeSlide: 1,
+      activeSlide: 0,
     };
   },
 };
@@ -41,6 +41,7 @@ export default {
             v-for="(slide, index) in this.store.quoteSliderData"
             class="dot-control"
             :class="activeSlide == index ? 'active' : ''"
+            @click="activeSlide = index"
           >
             <font-awesome-icon :icon="['fas', 'circle']" size="2xs" />
           </div>

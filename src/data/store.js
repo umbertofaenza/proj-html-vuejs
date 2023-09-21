@@ -111,14 +111,14 @@ export const store = reactive({
       profileRole: "Creative Director",
       profilePic: "/img/t4-1-100x100_left.jpg",
       quote:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, voluptas. Magnam quod ad maiores maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente, ipsa neque voluptatum at omnis. Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatibus, delectus quas ad dicta voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, rem doloremque eligendi consectetur ab perspiciatis!",
     },
     {
       profileName: "Giovanni Di Lorenzo",
       profileRole: "Project Manager",
       profilePic: "/img/t2-1-100x100_left.jpg",
       quote:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, voluptas. Magnam quod ad maiores maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente, ipsa neque voluptatum at omnis. Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam vel voluptatum vitae enim saepe iure voluptatibus. Perspiciatis, veniam a id repellendus dignissimos eius assumenda et optio, obcaecati autem quaerat numquam!",
     },
   ],
 });
