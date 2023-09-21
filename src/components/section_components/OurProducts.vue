@@ -18,8 +18,6 @@ export default {
       for (let i = 0; i < this.activeIndexes.length; i++) {
         this.activeIndexes.splice(i, 1, this.activeIndexes[i] + 1);
       }
-
-      console.log(this.activeIndexes);
     },
 
     showPrevProd() {
