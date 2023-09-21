@@ -6,7 +6,29 @@ export default {
     return {
       store,
       activeSlide: 0,
+      autoplay: false,
     };
+  },
+
+  methods: {
+    goNext() {
+      if (this.activeSlide < this.store.quoteSliderData.length - 1) {
+        this.activeSlide++;
+      } else {
+        this.activeSlide = 0;
+      }
+    },
+    setAutoplay() {
+      if (!this.autoplay) {
+        this.autoplay = setInterval(() => {
+          this.goNext();
+        }, 5000);
+      }
+    },
+  },
+
+  created() {
+    this.setAutoplay();
   },
 };
 </script>
