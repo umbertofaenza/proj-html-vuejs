@@ -214,6 +214,12 @@ main {
   .box {
     padding: 0 2.5rem;
     border-right: 1px solid #333;
+    cursor: pointer;
+
+    &:hover .box__icon,
+    &:hover span {
+      color: $secondary-color;
+    }
 
     &:last-child {
       border: none;
