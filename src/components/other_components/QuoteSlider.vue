@@ -35,6 +35,18 @@ export default {
         <div class="quote">
           {{ this.store.quoteSliderData[activeSlide].quote }}
         </div>
+        <!-- slider controls -->
+        <div class="slider-controls d-flex">
+          <div class="dot-control active">
+            <font-awesome-icon :icon="['fas', 'circle']" size="2xs" />
+          </div>
+          <div class="dot-control">
+            <font-awesome-icon :icon="['fas', 'circle']" size="2xs" />
+          </div>
+          <div class="dot-control">
+            <font-awesome-icon :icon="['fas', 'circle']" size="2xs" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -71,10 +83,22 @@ export default {
     max-width: 70%;
     color: #aaaaaa;
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   .container {
     height: 100%;
+  }
+}
+
+.slider-controls {
+  .dot-control {
+    margin: 0 10px;
+    cursor: pointer;
+
+    &.active {
+      color: $secondary-color;
+    }
   }
 }
 </style>

@@ -28,6 +28,7 @@ import {
   faHeart,
   faMaximize,
   faEye,
+  faCircle,
 } from "@fortawesome/free-solid-svg-icons";
 // regular
 import {
@@ -70,7 +71,8 @@ library.add(
   faGears,
   faHeart,
   faMaximize,
-  faEye
+  faEye,
+  faCircle
 );
 
 const app = createApp(App);
