@@ -36,6 +36,7 @@ import {
   faCalendarDays,
   faComments,
 } from "@fortawesome/free-regular-svg-icons";
+// brands
 import {
   faFacebookF,
   faTwitter,
