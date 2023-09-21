@@ -46,6 +46,30 @@ export const store = reactive({
       price: "£110.00",
       img: "/img/11.jpg",
     },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/01.jpg",
+    },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/02.jpg",
+    },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/01.jpg",
+    },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/02.jpg",
+    },
   ],
 
   dotdData: [
@@ -74,6 +98,36 @@ export const store = reactive({
       rating: "0",
       price: "£160.00",
       img: "/img/10.jpg",
+    },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/11.jpg",
+    },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/01.jpg",
+    },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/02.jpg",
+    },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/01.jpg",
+    },
+    {
+      productName: "Labyrinths of the World",
+      rating: "2",
+      price: "£110.00",
+      img: "/img/02.jpg",
     },
   ],
 

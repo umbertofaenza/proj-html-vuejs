@@ -9,7 +9,24 @@ export default {
   data() {
     return {
       store,
+      activeIndexes: [0, 1, 2, 3],
     };
+  },
+
+  methods: {
+    showNextProd() {
+      for (let i = 0; i < this.activeIndexes.length; i++) {
+        this.activeIndexes.splice(i, 1, this.activeIndexes[i] + 1);
+      }
+
+      console.log(this.activeIndexes);
+    },
+
+    showPrevProd() {
+      for (let i = 0; i < this.activeIndexes.length; i++) {
+        this.activeIndexes.splice(i, 1, this.activeIndexes[i] - 1);
+      }
+    },
   },
 
   components: { ProductCard },
@@ -29,7 +46,7 @@ export default {
     <!-- cards list-->
     <div class="row row-cols-4" id="cards-list">
       <!-- arrow left -->
-      <div class="arrow left">
+      <div @click="showPrevProd()" class="arrow left">
         <font-awesome-icon :icon="['fas', 'chevron-left']" />
       </div>
       <!-- cards -->
@@ -37,9 +54,10 @@ export default {
         v-for="(product, index) in this.store.ourProductsData"
         :key="index"
         :product="product"
+        v-show="activeIndexes.includes(index)"
       />
       <!-- arrow right -->
-      <div class="arrow right">
+      <div @click="this.showNextProd()" class="arrow right">
         <font-awesome-icon :icon="['fas', 'chevron-right']" />
       </div>
     </div>
