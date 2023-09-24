@@ -16,13 +16,24 @@ export default {
   methods: {
     showNextProd() {
       for (let i = 0; i < this.activeIndexes.length; i++) {
-        this.activeIndexes.splice(i, 1, this.activeIndexes[i] + 1);
+        if (this.activeIndexes.includes(this.store.dotdData.length - 1)) {
+          return;
+        } else {
+          this.activeIndexes.splice(i, 1, this.activeIndexes[i] + 1);
+        }
       }
     },
 
     showPrevProd() {
       for (let i = 0; i < this.activeIndexes.length; i++) {
-        this.activeIndexes.splice(i, 1, this.activeIndexes[i] - 1);
+        if (
+          this.activeIndexes.at(this.activeIndexes.length - 1) ==
+          this.activeIndexes.length - 1
+        ) {
+          return;
+        } else {
+          this.activeIndexes.splice(i, 1, this.activeIndexes[i] - 1);
+        }
       }
     },
   },
