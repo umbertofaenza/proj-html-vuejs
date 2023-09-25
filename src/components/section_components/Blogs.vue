@@ -9,7 +9,33 @@ export default {
   data() {
     return {
       store,
+      activeIndexes: [0, 1, 2],
     };
+  },
+
+  methods: {
+    showNext() {
+      for (let i = 0; i < this.activeIndexes.length; i++) {
+        if (this.activeIndexes.includes(this.store.blogsData.length - 1)) {
+          return;
+        } else {
+          this.activeIndexes.splice(i, 1, this.activeIndexes[i] + 1);
+        }
+      }
+    },
+
+    showPrev() {
+      for (let i = 0; i < this.activeIndexes.length; i++) {
+        if (
+          this.activeIndexes.at(this.activeIndexes.length - 1) ==
+          this.activeIndexes.length - 1
+        ) {
+          return;
+        } else {
+          this.activeIndexes.splice(i, 1, this.activeIndexes[i] - 1);
+        }
+      }
+    },
   },
 
   components: { BlogCard },
@@ -23,16 +49,17 @@ export default {
     <!-- cards -->
     <div class="row row-cols-3" id="blogs-list">
       <!-- arrow left -->
-      <div class="arrow left">
+      <div class="arrow left" @click="showPrev()">
         <font-awesome-icon :icon="['fas', 'chevron-left']" />
       </div>
       <BlogCard
         v-for="(blog, index) in this.store.blogsData"
         :key="index"
         :blog="blog"
+        v-show="this.activeIndexes.includes(index)"
       />
       <!-- arrow right -->
-      <div class="arrow right">
+      <div class="arrow right" @click="showNext()">
         <font-awesome-icon :icon="['fas', 'chevron-right']" />
       </div>
     </div>
